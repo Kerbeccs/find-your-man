@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Information</title>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'styles/stud2.css' %}">
+</head>
+<body>
+    <div class="container-xl px-4 mt-4">
+        <nav class="nav nav-borders">
+            <!-- <a class="nav-link" href="#" onclick="loadContent('http://127.0.0.1:8000/student/stud4/', 'Profile')">Profile</a>
+            <a class="nav-link active" href="#" onclick="loadContent('http://127.0.0.1:8000/student/stud2/', 'Academic Information')">Academic Information</a>
+            <a class="nav-link" href="#" onclick="loadContent('http://127.0.0.1:8000/student/', 'Achievement')">Achievement</a>
+            <a class="nav-link" href="#" onclick="loadContent('http://127.0.0.1:8000/student/stud3/', 'Notifications')">Notifications</a> -->
+
+            <a class="nav-link" href="http://127.0.0.1:8000/student/profile/" >Profile</a>
+            <a class="nav-link active" href="http://127.0.0.1:8000/student/academicinfo/" >Academic Information</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/student/achievement/">Achievement</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/student/noti/">Notifications </a>
+        </nav>
+    
+        <div class="card mb-4">
+          <div class="card-header">Academic Information</div>
+          <div class="card-body" id="academicInfo">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <form id="academicForm">
+                    <label class="small mb-1" for="inputCGPA">CGPA</label>
+                    <input class="form-control" id="inputCGPA" type="number" step="0.01" placeholder="Enter your CGPA" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputCurrentYear">Current Year</label>
+                    <input class="form-control" id="inputCurrentYear" type="number" placeholder="Enter your current year" required>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputTenthPercentage">10th Percentage</label>
+                    <input class="form-control" id="inputTenthPercentage" type="number" step="0.01" placeholder="Enter your 10th percentage" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputTwelfthPercentage">12th Percentage</label>
+                    <input class="form-control" id="inputTwelfthPercentage" type="number" step="0.01" placeholder="Enter your 12th percentage" required>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="mb-3">
+                <label class="small mb-1" for="inputLanguages">Languages</label>
+                <input class="form-control" id="inputLanguages" type="text" placeholder="Enter your languages, separated by commas" required>
+              </div>
+      
+              <div class="mb-3">
+                <label class="small mb-1" for="inputSkills">Skills</label>
+                <input class="form-control" id="inputSkills" type="text" placeholder="Enter your skills, separated by commas" required>
+              </div>
+              
+              <div class="mb-3">
+                <label class="small mb-1" for="inputLanguages">Project Description</label>
+                <input class="form-control" id="inputLanguages" type="text" placeholder="Enter your Project Description" required>
+              </div>
+            
+            <div class="mb-3 certificates-container">
+                <label class="small mb-1" for="inputCourse">Course completion certificate</label>
+                <div class="input-group mb-3">
+                    <input class="form-control input-course" type="file" accept=".pdf" required>
+                    <button class="btn btn-outline-secondary add-input-course" type="button">Add More</button>
+                </div>
+            </div>
+            
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputLeetcode">Leetcode</label>
+                    <input class="form-control" id="inputLeetcode" type="text" placeholder="Enter your Leetcode profile link" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputLinkedin">LinkedIn</label>
+                    <input class="form-control" id="inputLinkedin" type="text" placeholder="Enter your LinkedIn profile link" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputGithub">GitHub</label>
+                    <input class="form-control" id="inputGithub" type="text" placeholder="Enter your GitHub profile link" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="small mb-1" for="inputLinkedin">HackerRank</label>
+                    <input class="form-control" id="inputLinkedin" type="text" placeholder="Enter your HackerRank profile link" required>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="button">Save changes</button>
+               
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include custom JavaScript file -->
+    <script src="{% static 'scripts/stud2.js' %}"></script>
+</body>
+</html>

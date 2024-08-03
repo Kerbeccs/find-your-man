@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Filter search result page </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    	body{margin-top:20px;
+background:#f2f6fc;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    color: #666666;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid .grid-body {
+    padding: 15px 20px 15px 20px;
+    font-size: 0.9em;
+    line-height: 1.9em;
+}
+
+
+.checkbox {
+    margin-bottom: 10px;
+}
+
+.checkbox label {
+    display: block;
+    margin-bottom: 5px;
+}
+.search .checkbox input[name="batch"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+.search .checkbox select[name="gender"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+.search .checkbox input[name="branch"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+.search .checkbox input[name="skills"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+.checkbox input[type="number"] {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox input[type="number"]:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+    </style>
+</head>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+
+<div class="col-md-12">
+<div class="grid search">
+<div class="grid-body">
+<div class="row">
+
+<div class="col-md-3">
+<h2 class="grid-title"><i class="fa fa-filter"></i> Filters</h2>
+<hr>
+
+<h4>Filter By:</h4>
+<div class="checkbox">
+<label><b>Batch:</b></label>
+<input type="number" class="icheck" name="batch" placeholder="Enter the Batch(i.g.2020)"> 
+</div>
+<div class="checkbox">
+<label><b>Branch:</b></label>
+<input type="text" class="icheck" name="branch" placeholder="Enter the Branch"> 
+</div>
+<div class="checkbox">
+    <label for="gender" class="icheck"><b>Select Gender:</b></label>
+    <select name="gender"  id="gender">
+        <option value="select">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+  </div>
+  <div class="checkbox">
+    <label><b>CGPA:</b></label>
+    <input type="number" class="icheck" name="branch" placeholder="Enter the CGPA"> 
+  </div>
+  <div class="checkbox">
+    <label><b>Skills:</b></label>
+    <input type="text" class="icheck" name="branch" placeholder="Enter the Skiils"> 
+  </div>
+  <div class="checkbox">
+    <label><b>10th Percentage:</b></label>
+    <input type="number" class="icheck" name="branch" placeholder="Enter the 10th Percentage:"> 
+  </div>
+  <div class="checkbox">
+    <label><b>12th Percentage:</b></label>
+    <input type="number" class="icheck" name="branch" placeholder="Enter the 12th Percentage:"> 
+  </div>
+  <div class="checkbox">
+    <label><b>Project Area:</b></label>
+    <input type="number" class="icheck" name="branch" placeholder="Enter the Project Area:"> 
+  </div>
+  <div class="checkbox">
+    <div class="icheck">
+        <button id="searchBtn1">Search</button>
+    </div>
+
+  </div>
+<div class="padding"></div>
+</div>
+
+
+<div class="col-md-9">
+<h2><i class="fa fa-file-o"></i> Result</h2>
+<hr>
+
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Enter the keyword for search">
+<span class="input-group-btn">
+<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+</span>
+</div>
+
+<p>Showing all results matching</p>
+<div class="padding"></div>
+
+<div class="table-responsive">
+<table class="table table-hover">
+<tbody><tr>
+
+</tr>
+</tbody></table>
+</div>
+
+
+<ul class="pagination">
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

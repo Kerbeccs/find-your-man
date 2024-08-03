@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--   <link rel="stylesheet" href="pd.css"> -->
+  <style>body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    background-color:#f2f6fc;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color:#98b9ea;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar-item {
+    background-color:#f2f6fc;
+    border: none;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }</style>
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <button class="sidebar-item" id="select-students-btn">Select Students</button>
+      <button class="sidebar-item" id="view-placed-students-btn">View Placed Students</button>
+      <button class="sidebar-item" id="notification-inbox-btn">Notification Inbox</button>
+    </nav>
+    <main class="content">
+      <h1></h1>
+      <p>Welcome to the dashboard!</p>
+    </main>
+  </div>
+  <script >document.addEventListener('DOMContentLoaded', () => {
+    const selectStudentsBtn = document.getElementById('select-students-btn');
+    const viewPlacedStudentsBtn = document.getElementById('view-placed-students-btn');
+    const notificationInboxBtn = document.getElementById('notification-inbox-btn');
+  
+    selectStudentsBtn.addEventListener('click', () => {
+        window.location.href = 'filter_page.html'; // Redirect to filter.html
+      });
+  
+    viewPlacedStudentsBtn.addEventListener('click', () => {
+      console.log('View Placed Students button clicked');
+    });
+  
+    notificationInboxBtn.addEventListener('click', () => {
+      console.log('Notification Inbox button clicked');
+    });
+  });</script>
+</body>
+</html>
